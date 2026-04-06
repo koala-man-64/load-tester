@@ -1,0 +1,10 @@
+{
+  "order_id": 1,
+  "customer_id": "customer-001",
+  "items": [
+    {
+      "sku": "item-001",
+      "quantity": 1
+    }
+  ]
+}

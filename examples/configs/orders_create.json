@@ -1,0 +1,36 @@
+{
+  "service_name": "Orders API Create Order",
+  "method": "POST",
+  "url": "https://api.example.com/orders",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "metadata": {
+    "environment": "dev",
+    "build_id": "42"
+  },
+  "auth": {
+    "token_url": "https://api.example.com/auth/token",
+    "method": "POST",
+    "body_mode": "form",
+    "headers": {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "body": {
+      "client_id": "my-client",
+      "client_secret": "my-secret"
+    },
+    "token_json_path": "access_token",
+    "header_name": "Authorization",
+    "header_template": "Bearer {token}"
+  },
+  "sample_request_files": [
+    "../requests/order_001.json",
+    "../requests/order_002.json"
+  ],
+  "duration_seconds": 300,
+  "parallel_users": 20,
+  "ramp_up_seconds": 30,
+  "timeout_seconds": 30,
+  "verify_tls": true
+}
